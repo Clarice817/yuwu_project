@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "34918005",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
       "icon_id": "8268337",
       "name": "shopping cart",
       "font_class": "shoppingcart",
