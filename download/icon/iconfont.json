@@ -1,0 +1,30 @@
+{
+  "id": "5245358",
+  "name": "yuwuproject",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8268337",
+      "name": "shopping cart",
+      "font_class": "shoppingcart",
+      "unicode": "e881",
+      "unicode_decimal": 59521
+    },
+    {
+      "icon_id": "11372644",
+      "name": "帮助",
+      "font_class": "bangzhu",
+      "unicode": "e8ac",
+      "unicode_decimal": 59564
+    },
+    {
+      "icon_id": "29959514",
+      "name": "聊天",
+      "font_class": "liaotian",
+      "unicode": "100d9",
+      "unicode_decimal": 65753
+    }
+  ]
+}
