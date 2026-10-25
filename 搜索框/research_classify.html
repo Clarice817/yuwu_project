@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索 - YW商城</title>
+    <link rel="stylesheet" href="../download/icon2/iconfont.css">
+    <link rel="stylesheet" href="./research_classify.css">
+    <script src="./research_classfy.js"></script>
+</head>
+<body>
+    <!-- Fixed Search Header -->
+    <div class="search-header">
+        <a href="javascript:history.back()" class="back-btn">
+            <i class="iconfont icon-sousuo"></i>
+        </a>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索商品，如：数码、食品、服饰" value="">
+            <i class="iconfont icon-sousuo search-icon"></i>
+        </div>
+        <button class="search-btn" onclick="handleSearch()">搜索</button>
+    </div>
+
+    <!-- Product Container -->
+    <div class="product-container">
+        <!-- 搜索结果提示 -->
+        <div id="searchResult" style="display: none; padding: 15px; background: #fff; margin-bottom: 10px; border-radius: 8px;">
+            <p style="color: #333; font-size: 14px;">
+                找到 <span id="resultCount" style="color: #f5b752; font-weight: bold;">0</span> 件与 "<span id="searchKeyword" style="color: #f5b752;"></span>" 相关的商品
+            </p>
+        </div>
+        
+        <!-- 空状态提示 -->
+        <div id="emptyState" style="display: none; text-align: center; padding: 60px 20px;">
+            <i class="iconfont icon-sousuo" style="font-size: 60px; color: #ccc; margin-bottom: 20px;"></i>
+            <p style="color: #999; font-size: 16px;">请输入关键词搜索商品</p>
+            <p style="color: #ccc; font-size: 14px; margin-top: 10px;">例如：数码、食品、服饰</p>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid" style="display: none;">
+            <!-- 商品卡片由JavaScript动态生成 -->
+        </div>
+    </div>
+</body>
+</html>
