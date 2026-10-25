@@ -18,11 +18,19 @@
                 <li><a href="#">用户登录</a><span>|</span></li>
                 <li class="cart">
                     <!-- <a href="#">购物车</a> -->
-                     <a href="#">
+                     <a href="#" class="cart-trigger">
                         <i class="iconfont icon-shoppingcart"></i>
                         <i>购物车</i>
                      </a>
-                    <div class="cart-list">购物车中还没有商品</div>
+                    <div class="shoppingcart_list">
+                        <div class="sum_price">
+                            <span>共减：</span>
+                            <span>合计：</span>
+                            <a href="../购物车/oder.html" target="_blank">
+                                <span>去结算</span>
+                            </a>
+                        </div>
+                    </div>
                 </li>
             </ul>
 
@@ -74,6 +82,37 @@
      </div>
 
      <!-- 下方白色导航栏 end-->
+
+     <!-- 购物车侧边栏 start -->
+     <div class="cart-overlay"></div>
+     <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <span>购物车</span>
+            <button class="close-btn">×</button>
+        </div>
+        <div class="cart-sidebar-content">
+            <!-- 商品列表由 JS 动态生成 -->
+        </div>
+        <div class="cart-sidebar-footer">
+            <div class="cart-summary">
+                <div class="cart-summary-row">
+                    <span>商品数量</span>
+                    <span>0件</span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>运费</span>
+                    <span>免运费</span>
+                </div>
+                <div class="cart-summary-row total">
+                    <span>合计</span>
+                    <span class="price">¥0</span>
+                </div>
+            </div>
+            <a href="../购物车/oder.html" class="checkout-btn">去结算</a>
+        </div>
+     </div>
+     <!-- 购物车侧边栏 end -->
+
       <!-- Banner start -->
        <div class="banner">
             <div class="slide">

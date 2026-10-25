@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单确认 - YW商城</title>
+    <link rel="stylesheet" href="oder.css">
+    <link rel="stylesheet" href="../download/icon2/iconfont.css">
+    <script src="../导航栏.html/main.js"></script>
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <div class="black_nav">
+        <div class="wrap">
+            <ul class="black_nav_right">
+                <li><a href="#">用户注册</a><span>|</span></li>
+                <li><a href="#">用户登录</a><span>|</span></li>
+                <li class="cart">
+                    <a href="#" class="cart-trigger">
+                        <i class="iconfont icon-shoppingcart"></i>
+                        <i>购物车</i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="black_nav_left">
+                <li><a href="../导航栏.html/index.html">YW商城</a><span>|</span></li>
+                <li><a href="#">商品分类</a><span>|</span></li>
+                <li><a href="#">新品推荐</a><span>|</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 订单主体内容 -->
+    <div class="order-page">
+        <!-- 订单成功提示 -->
+        <div class="order-success-header">
+            <div class="success-icon">
+                <svg viewBox="0 0 120 120" width="120" height="120">
+                    <circle cx="60" cy="60" r="55" fill="#e8f5e9" />
+                    <path d="M35 62 L52 79 L85 42" stroke="#4caf50" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h1 class="success-title">订单提交成功</h1>
+            <p class="success-subtitle">模拟支付已完成</p>
+        </div>
+
+        <!-- 订单信息卡片 -->
+        <div class="order-card">
+            <!-- 订单基本信息 -->
+            <div class="order-info-bar">
+                <div class="order-info-item">
+                    <span class="info-icon">📋</span>
+                    <span class="info-label">订单编号：</span>
+                    <span class="info-value" id="orderNumber">YW-20261025-0001</span>
+                </div>
+                <div class="order-info-divider"></div>
+                <div class="order-info-item">
+                    <span class="info-icon">🕐</span>
+                    <span class="info-label">创建时间：</span>
+                    <span class="info-value" id="orderTime">2026-10-25 11:48:00</span>
+                </div>
+                <div class="order-info-divider"></div>
+                <div class="order-info-item">
+                    <span class="info-icon">✅</span>
+                    <span class="info-label">订单状态：</span>
+                    <span class="info-value status-paid">已支付</span>
+                </div>
+            </div>
+
+            <!-- 商品表格区域 -->
+            <div class="order-products">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th class="col-product">商品信息</th>
+                            <th class="col-quantity">数量</th>
+                            <th class="col-price">单价</th>
+                            <th class="col-subtotal">小计</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTableBody">
+                        <!-- 动态生成 -->
+                    </tbody>
+                </table>
+
+                <!-- 订单总价 -->
+                <div class="order-total-section">
+                    <div class="total-label">订单总价</div>
+                    <div class="total-price" id="orderTotalPrice">¥0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="order-actions">
+            <button class="btn btn-outline" onclick="window.location.href='../导航栏.html/index.html'">
+                继续购物
+            </button>
+            <button class="btn btn-primary" onclick="alert('订单详情功能开发中...')">
+                查看订单
+            </button>
+        </div>
+    </div>
+
+    <!-- 购物车侧边栏 -->
+    <div class="cart-overlay"></div>
+    <div class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <span>购物车</span>
+            <button class="close-btn" onclick="closeCartSidebar()">×</button>
+        </div>
+        <div class="cart-sidebar-content">
+            <div class="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <div class="empty-cart-text">购物车已清空</div>
+            </div>
+        </div>
+        <div class="cart-sidebar-footer">
+            <div class="cart-summary">
+                <div class="cart-summary-row total">
+                    <span>合计</span>
+                    <span class="price">¥0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 生成订单编号
+        function generateOrderNumber() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var month = String(now.getMonth() + 1).padStart(2, '0');
+            var day = String(now.getDate()).padStart(2, '0');
+            var random = String(Math.floor(Math.random() * 9000) + 1000);
+            return 'YW-' + year + month + day + '-' + random;
+        }
+
+        // 格式化时间
+        function formatTime(date) {
+            var year = date.getFullYear();
+            var month = String(date.getMonth() + 1).padStart(2, '0');
+            var day = String(date.getDate()).padStart(2, '0');
+            var hour = String(date.getHours()).padStart(2, '0');
+            var minute = String(date.getMinutes()).padStart(2, '0');
+            var second = String(date.getSeconds()).padStart(2, '0');
+            return year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+        }
+
+        // 初始化订单页面
+        (function() {
+            var now = new Date();
+
+            // 设置订单编号和时间
+            document.getElementById('orderNumber').textContent = generateOrderNumber();
+            document.getElementById('orderTime').textContent = formatTime(now);
+
+            // 从 localStorage 读取购物车数据
+            var cart = window.getCartData ? window.getCartData() : [];
+
+            var tbody = document.getElementById('productTableBody');
+            var totalPrice = 0;
+
+            if (cart.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align:center;padding:40px;color:#999;">暂无订单商品</td></tr>';
+            } else {
+                var html = '';
+                for (var i = 0; i < cart.length; i++) {
+                    var item = cart[i];
+                    var subtotal = item.price * item.quantity;
+                    totalPrice += subtotal;
+
+                    html += '<tr>';
+                    html += '<td class="product-cell">';
+                    html += '<div class="product-thumb"><img src="' + item.img + '" alt="' + item.name + '"></div>';
+                    html += '<div class="product-name">' + item.name + '</div>';
+                    html += '</td>';
+                    html += '<td class="quantity-cell">' + item.quantity + '</td>';
+                    html += '<td class="price-cell">¥' + item.price + '</td>';
+                    html += '<td class="subtotal-cell">¥' + subtotal + '</td>';
+                    html += '</tr>';
+                }
+                tbody.innerHTML = html;
+            }
+
+            document.getElementById('orderTotalPrice').textContent = '¥' + totalPrice;
+
+            // 订单生成后清空购物车
+            if (window.clearCart) {
+                window.clearCart();
+            }
+        })();
+    </script>
+</body>
+</html>
