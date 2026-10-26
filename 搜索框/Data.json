@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "name": "蓝牙音箱",
+        "tag": "数码",
+        "price": 99,
+        "originalPrice": 199,
+        "sales": "1.2万",
+        "stock": 158,
+        "image": "../image_data/bluebox2.png"
+    },
+    {
+        "id": 2,
+        "name": "蓝牙耳机",
+        "tag": "数码",
+        "price": 159,
+        "originalPrice": 299,
+        "sales": "8562",
+        "stock": 236,
+        "image": "../image_data/earmachin.png"
+    },
+    {
+        "id": 3,
+        "name": "智能手环",
+        "tag": "数码",
+        "price": 89,
+        "originalPrice": 169,
+        "sales": "2.3万",
+        "stock": 342,
+        "image": "../image_data/watch.png"
+    },
+    {
+        "id": 4,
+        "name": "平板电脑",
+        "tag": "数码",
+        "price": 1299,
+        "originalPrice": 1999,
+        "sales": "5630",
+        "stock": 89,
+        "image": "../image_data/ipad.png"
+    },
+    {
+        "id": 5,
+        "name": "笔记本电脑",
+        "tag": "数码",
+        "price": 4999,
+        "originalPrice": 6999,
+        "sales": "1.8万",
+        "stock": 67,
+        "image": "../image_data/computer.png"
+    },
+    {
+        "id": 6,
+        "name": "机械键盘",
+        "tag": "数码",
+        "price": 199,
+        "originalPrice": 399,
+        "sales": "4230",
+        "stock": 125,
+        "image": "../image_data/keyboard.png"
+    },
+    {
+        "id": 7,
+        "name": "华为手机",
+        "tag": "数码",
+        "price": 4999,
+        "originalPrice": 5999,
+        "sales": "1.5万",
+        "stock": 188,
+        "image": "../image_data/浅黄色系商品图片生成需求 (24).png"
+    },
+    {
+        "id": 8,
+        "name": "vivo手机",
+        "tag": "数码",
+        "price": 3999,
+        "originalPrice": 4599,
+        "sales": "1.2万",
+        "stock": 215,
+        "image": "../image_data/浅黄色系商品图片生成需求 (25).png"
+    },
+    {
+        "id": 9,
+        "name": "苹果手机",
+        "tag": "数码",
+        "price": 6999,
+        "originalPrice": 7999,
+        "sales": "2万",
+        "stock": 95,
+        "image": "../image_data/浅黄色系商品图片生成需求 (26).png"
+    },
+    {
+        "id": 10,
+        "name": "小米手机",
+        "tag": "数码",
+        "price": 3499,
+        "originalPrice": 3999,
+        "sales": "1.8万",
+        "stock": 176,
+        "image": "../image_data/浅黄色系商品图片生成需求 (27).png"
+    },
+    {
+        "id": 11,
+        "name": "本地香蕉",
+        "tag": "食品",
+        "price": 2.4,
+        "originalPrice": 5,
+        "sales": "3万",
+        "stock": 420,
+        "image": "../image_data/bannana.png"
+    },
+    {
+        "id": 12,
+        "name": "奶油饼干",
+        "tag": "食品",
+        "price": 9.99,
+        "originalPrice": 19.9,
+        "sales": "2.5万",
+        "stock": 580,
+        "image": "../image_data/biscuit.png"
+    },
+    {
+        "id": 13,
+        "name": "北海道面包",
+        "tag": "食品",
+        "price": 15.5,
+        "originalPrice": 25,
+        "sales": "1.8万",
+        "stock": 320,
+        "image": "../image_data/bread.png"
+    },
+    {
+        "id": 14,
+        "name": "香肠",
+        "tag": "食品",
+        "price": 6.6,
+        "originalPrice": 12,
+        "sales": "4万",
+        "stock": 750,
+        "image": "../image_data/chang.png"
+    },
+    {
+        "id": 15,
+        "name": "老鸡汤泡面",
+        "tag": "食品",
+        "price": 34.4,
+        "originalPrice": 50,
+        "sales": "2.2万",
+        "stock": 280,
+        "image": "../image_data/noodle.png"
+    },
+    {
+        "id": 16,
+        "name": "新鲜菠萝",
+        "tag": "食品",
+        "price": 20,
+        "originalPrice": 35,
+        "sales": "1.5万",
+        "stock": 195,
+        "image": "../image_data/pinapple.png"
+    },
+    {
+        "id": 17,
+        "name": "冬日大衣",
+        "tag": "服饰",
+        "price": 647,
+        "originalPrice": 999,
+        "sales": "8000",
+        "stock": 135,
+        "image": "../image_data/coat.png"
+    },
+    {
+        "id": 18,
+        "name": "帅气皮衣",
+        "tag": "服饰",
+        "price": 888,
+        "originalPrice": 1299,
+        "sales": "6500",
+        "stock": 88,
+        "image": "../image_data/coat2.png"
+    },
+    {
+        "id": 19,
+        "name": "温柔系连衣裙",
+        "tag": "服饰",
+        "price": 155,
+        "originalPrice": 299,
+        "sales": "1.2万",
+        "stock": 267,
+        "image": "../image_data/dress.png"
+    },
+    {
+        "id": 20,
+        "name": "直筒裤",
+        "tag": "服饰",
+        "price": 178,
+        "originalPrice": 299,
+        "sales": "9500",
+        "stock": 198,
+        "image": "../image_data/pants.png"
+    },
+    {
+        "id": 21,
+        "name": "睡衣",
+        "tag": "服饰",
+        "price": 218,
+        "originalPrice": 399,
+        "sales": "7000",
+        "stock": 345,
+        "image": "../image_data/sleepcloth.png"
+    },
+    {
+        "id": 22,
+        "name": "新中式",
+        "tag": "服饰",
+        "price": 219,
+        "originalPrice": 399,
+        "sales": "5500",
+        "stock": 156,
+        "image": "../image_data/chinesecloth.png"
+    }
+]
